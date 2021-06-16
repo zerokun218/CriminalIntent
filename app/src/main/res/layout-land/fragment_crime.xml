@@ -2,22 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <TextView
-        style="?android:listSeparatorTextViewStyle"
+    <include
+        layout="@layout/view_camera_and_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/crime_title_label" />
-
-    <EditText
-        android:id="@+id/crime_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:hint="@string/crime_title_hint" />
+        android:layout_height="wrap_content" />
 
     <TextView
         style="?android:listSeparatorTextViewStyle"
@@ -27,7 +18,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="73dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
@@ -47,5 +38,43 @@
             android:layout_marginRight="16dp"
             android:layout_weight="1"
             android:text="@string/crime_solved_label" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Update" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Delete"
+        app:backgroundTint="#F60505" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/crime_report"
+            android:layout_width="213dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="@string/crime_report_text" />
+
+        <Button
+            android:id="@+id/crime_suspect"
+            android:layout_width="213dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="@string/crime_suspect_text" />
     </LinearLayout>
 </LinearLayout>

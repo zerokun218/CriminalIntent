@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawHorizontalTrack="false"
+    android:scrollbarAlwaysDrawVerticalTrack="false"
+    android:scrollbars="vertical">
 
-    <TextView
-        style="?android:listSeparatorTextViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/crime_title_label" />
 
-    <EditText
-        android:id="@+id/crime_title"
+    <include
+        layout="@layout/view_camera_and_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:hint="@string/crime_title_hint" />
+        android:layout_height="wrap_content" />
 
     <TextView
         style="?android:listSeparatorTextViewStyle"
@@ -55,4 +51,27 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Update" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Delete"
+        app:backgroundTint="#F60505" />
+
+    <Button
+        android:id="@+id/crime_suspect"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/crime_suspect_text" />
+
+    <Button
+        android:id="@+id/crime_report"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/crime_report_text" />
+
 </LinearLayout>
